@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balaji Kapsikar | Cyber Security & AI Generalist Leader</title>
+  <meta name="description" content="Portfolio of Balaji Kapsikar - Cyber Security & AI Generalist Leader, Fintech Specialist, and Data Protection Officer (DPO). 14+ years of cloud security and risk experience.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind is avoided as per guidelines; Vanilla CSS is loaded below -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Cyber Grid Background -->
+  <div class="cyber-grid" id="cyberGrid"></div>
+  <canvas class="matrix-canvas" id="matrixCanvas"></canvas>
+
+  <!-- Glowing Header / Nav -->
+  <header class="cyber-header" id="mainHeader">
+    <div class="header-container">
+      <div class="logo">
+        <a href="#home" id="logoLink"><span class="neon-text-green">&lt;</span>BALAJI.SEC<span class="neon-text-green">/&gt;</span></a>
+      </div>
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#about" id="navAbout">Profile</a></li>
+          <li><a href="#terminal" id="navTerminal">Terminal</a></li>
+          <li><a href="#experience" id="navExperience">Experience</a></li>
+          <li><a href="#skills" id="navSkills">Skills</a></li>
+          <li><a href="#certifications" id="navCerts">Certifications</a></li>
+          <li><a href="#speaking" id="navSpeaking">Speaking</a></li>
+          <li><a href="#contact" id="navContact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="terminal-toggle" id="terminalToggleBtn" aria-label="Quick Terminal">
+        <i data-lucide="terminal"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="cyber-badge" id="heroStatusBadge">
+            <span class="pulse-dot"></span> SECURE PROTOCOL ACTIVE
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="static-text">I AM</span>
+            <span class="neon-title" id="heroName">BALAJI KAPSIKAR</span>
+          </h1>
+          
+          <h2 class="hero-subtitle">
+            <span id="typingText"></span><span class="cursor-blink">|</span>
+          </h2>
+          
+          <p class="hero-description">
+            Cyber Security & AI Generalist Leader with 14 years of experience heading technology risk and cloud security in Fintech. Expert in global regulatory compliance, data protection, and next-generation threat mitigation.
+          </p>
+
+          <!-- Core Stats Grid -->
+          <div class="stats-grid" id="coreStatsGrid">
+            <div class="stat-card">
+              <span class="stat-number neon-text-cyan">14+</span>
+              <span class="stat-label">Years Cyber Experience</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number neon-text-green">8+</span>
+              <span class="stat-label">Global Certifications</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number neon-text-purple">100+</span>
+              <span class="stat-label">Vendors Audited</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#about" class="cyber-btn primary-btn" id="btnExplore">
+              <i data-lucide="shield-alert"></i> DECRYPT PROFILE
+            </a>
+            <a href="#contact" class="cyber-btn secondary-btn" id="btnTouch">
+              <i data-lucide="send"></i> ESTABLISH CONTACT
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TERMINAL -->
+    <section class="terminal-section" id="terminal">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title"><span class="code-bracket">&lt;</span>SECURE_TERMINAL<span class="code-bracket">/&gt;</span></h2>
+          <p class="section-subtitle">Interact with my professional profile via terminal commands</p>
+        </div>
+
+        <div class="terminal-window" id="terminalWindow">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">guest@balaji-sec-node:~</div>
+            <div class="terminal-connection-status"><i data-lucide="wifi"></i> ENCRYPTED</div>
+          </div>
+          
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-line system-msg">Initializing Balaji.Sec Core Secure Node [Version 1.0.4]...</div>
+            <div class="terminal-line system-msg">Connection established from client. Decryption protocols loaded.</div>
+            <div class="terminal-line system-msg">Type <span class="cmd-highlight">help</span> to view all available commands or use the shortcuts below.</div>
+            <br>
+          </div>
+          
+          <div class="terminal-input-container">
+            <span class="terminal-prompt">guest@balaji-sec-node:~$</span>
+            <input type="text" id="terminalInput" placeholder="Enter command (e.g. info, experience, certifications)..." autocomplete="off" autofocus>
+          </div>
+        </div>
+
+        <div class="terminal-shortcuts" id="terminalShortcuts">
+          <button class="shortcut-btn" id="cmdHelpBtn" data-cmd="help">help</button>
+          <button class="shortcut-btn" id="cmdInfoBtn" data-cmd="info">info</button>
+          <button class="shortcut-btn" id="cmdExpBtn" data-cmd="experience">experience</button>
+          <button class="shortcut-btn" id="cmdSkillsBtn" data-cmd="skills">skills</button>
+          <button class="shortcut-btn" id="cmdCertsBtn" data-cmd="certifications">certifications</button>
+          <button class="shortcut-btn" id="cmdClearBtn" data-cmd="clear">clear</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <div class="about-grid">
+          <div class="about-visual">
+            <div class="cyber-avatar-container">
+              <div class="avatar-glow"></div>
+              <div class="avatar-frame">
+                <i data-lucide="shield" class="avatar-fallback-icon"></i>
+              </div>
+              <div class="avatar-radar"></div>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <div class="section-header align-left">
+              <h2 class="section-title"><span class="code-bracket">&lt;</span>PROFILE_SUMMARY<span class="code-bracket">/&gt;</span></h2>
+            </div>
+            <p class="about-para">
+              I head technology and cyber risk with 14 years of professional experience across information and cloud security platforms. My background combines deep technical capabilities in cybersecurity with enterprise-level risk governance, data privacy architecture, and next-generation compliance leadership.
+            </p>
+            <p class="about-para">
+              As a Data Protection Officer (DPO) and VCISO, I have led security roadmaps across product security, operations, and enterprise IT. My work is aligned to modern frameworks like <strong>NIST AI RMF</strong>, <strong>MAS AIRMG</strong>, and global privacy standards.
+            </p>
+
+            <div class="profile-meta-details">
+              <div class="meta-item">
+                <span class="meta-label">CURRENT ROLE:</span>
+                <span class="meta-val">Sr Manager Cyber Security & Cyber Risk, DPO @ Funding Societies</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">ACADEMIC CREDENTIAL:</span>
+                <span class="meta-val">Master of Computer Applications (MCA)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">COMMUNITY ROLE:</span>
+                <span class="meta-val">Keynote Speaker, Certified Mentor, Award Winner</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">GEOGRAPHY:</span>
+                <span class="meta-val">Pune Area, India / Singapore</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="experience-section" id="experience">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title"><span class="code-bracket">&lt;</span>PROFESSIONAL_JOURNEY<span class="code-bracket">/&gt;</span></h2>
+          <p class="section-subtitle">A trace of my corporate cybersecurity experience and impact</p>
+        </div>
+
+        <div class="timeline" id="expTimeline">
+          <!-- Job 1 -->
+          <div class="timeline-item" id="job-funding-societies">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="job-duration neon-text-green">July 2021 - Present</span>
+              <h3 class="job-title">Sr Manager Cyber Security & Cyber Risk, DPO</h3>
+              <h4 class="job-company"><i data-lucide="building"></i> Funding Societies Singapore (Fintech)</h4>
+              <p class="job-desc-summary">Manage cybersecurity, partner with executive leadership, regulators, and investors to ensure platforms remain secure, resilient, and compliant.</p>
+              
+              <button class="expand-details-btn" id="btn-expand-funding" aria-expanded="false" onclick="toggleJobDetails('details-funding', this)">
+                <span>Decrypt Full Dossier</span> <i data-lucide="chevron-down"></i>
+              </button>
+              
+              <div class="job-details-expand hidden-content" id="details-funding">
+                <ul class="job-bullets">
+                  <li>Direct and oversee end-to-end Information Security across the Group and its regional subsidiaries.</li>
+                  <li>Drove and formalised the enterprise AI Governance & Security Framework aligned to NIST AI RMF, MAS AIRMG, and PDPA.</li>
+                  <li>Designed data security architecture supporting safe AI consumption, DLP, and tokenisation/encryption protocols.</li>
+                  <li>Built and led a structured vendor security management program for 100+ vendors, reducing risk by 70% in one year.</li>
+                  <li>Pioneered role-based security awareness programs driving a 75% improvement in employee resilience.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="timeline-item" id="job-sgx">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="job-duration neon-text-cyan">Jan 2019 - July 2021</span>
+              <h3 class="job-title">Information & Cloud Security Consultant</h3>
+              <h4 class="job-company"><i data-lucide="building"></i> SGX Group (Singapore Exchange)</h4>
+              <p class="job-desc-summary">Evaluate and review security architectures of new cloud platforms and solutions proposed by development, infrastructure, and business teams.</p>
+              
+              <button class="expand-details-btn" id="btn-expand-sgx" aria-expanded="false" onclick="toggleJobDetails('details-sgx', this)">
+                <span>Decrypt Full Dossier</span> <i data-lucide="chevron-down"></i>
+              </button>
+              
+              <div class="job-details-expand hidden-content" id="details-sgx">
+                <ul class="job-bullets">
+                  <li>Responsible for information classification reviews for On-Premise and Cloud environments.</li>
+                  <li>Conducted rigorous cloud security assessments and project release readiness reviews.</li>
+                  <li>Provided IT Risk Advisory aligned to MAS TRM, ISO27001, and NIST SP 800-30.</li>
+                  <li>Hands-on tools utilization including Nessus, Snare, SIEM, FireEye ATP, CASB, and AWS GuardDuty.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job 3 -->
+          <div class="timeline-item" id="job-enerpac">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="job-duration neon-text-purple">Aug 2016 - Jan 2019</span>
+              <h3 class="job-title">Senior Information Security Consultant</h3>
+              <h4 class="job-company"><i data-lucide="building"></i> Enerpac Tool Group</h4>
+              <p class="job-desc-summary">Served as the primary APAC & Middle East Information Security Advisor across all business units.</p>
+              
+              <button class="expand-details-btn" id="btn-expand-enerpac" aria-expanded="false" onclick="toggleJobDetails('details-enerpac', this)">
+                <span>Decrypt Full Dossier</span> <i data-lucide="chevron-down"></i>
+              </button>
+              
+              <div class="job-details-expand hidden-content" id="details-enerpac">
+                <ul class="job-bullets">
+                  <li>Maintained and updated corporate risk registers and completed risk assessments.</li>
+                  <li>Executed Security reviews during corporate Mergers and Acquisitions (M&A).</li>
+                  <li>Assessed security for industrial environments including IoT, SCADA, and ICS nodes.</li>
+                  <li>Mapped security programs against SOX, PCI DSS, FIPS, GDPR, and PDPA regulations.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job 4 -->
+          <div class="timeline-item" id="job-itc">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="job-duration">Sept 2014 - Aug 2016</span>
+              <h3 class="job-title">Information Security Officer</h3>
+              <h4 class="job-company"><i data-lucide="building"></i> ITC Infotech</h4>
+              <p class="job-desc-summary">Established IT security requirements for business applications in line with technology risk management guidelines.</p>
+              
+              <button class="expand-details-btn" id="btn-expand-itc" aria-expanded="false" onclick="toggleJobDetails('details-itc', this)">
+                <span>Decrypt Full Dossier</span> <i data-lucide="chevron-down"></i>
+              </button>
+              
+              <div class="job-details-expand hidden-content" id="details-itc">
+                <ul class="job-bullets">
+                  <li>Conducted IT Security Audits aligned with ISO27001 and PCI DSS.</li>
+                  <li>Performed Vulnerability Assessments (VA/PT) for critical business servers.</li>
+                  <li>Monitored and resolved audit findings and designed local ISMS security policies.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Older jobs collapsed under a compact hub -->
+          <div class="timeline-item older-experiences" id="olderJobsGroup">
+            <div class="timeline-dot grey-dot"></div>
+            <div class="timeline-content older-box">
+              <h3 class="job-title-compact">Prior Security Appointments</h3>
+              <p class="compact-desc">Click below to decrypt experience logs for IBM, HDFC Bank, and Angel Broking.</p>
+              <button class="expand-details-btn secondary-btn" id="btn-expand-older" aria-expanded="false" onclick="toggleJobDetails('details-older', this)">
+                <span>Decrypt Prior History</span> <i data-lucide="history"></i>
+              </button>
+              
+              <div class="job-details-expand hidden-content" id="details-older">
+                <div class="older-job">
+                  <h4>Information Security Consultant | IBM India</h4>
+                  <span class="job-duration">April 2013 - Sept 2014</span>
+                  <p>Performed network and application penetration testing. Conducted compliance assessments against HIPAA, FFIEC, and ISO22301.</p>
+                </div>
+                <div class="older-job">
+                  <h4>Manager IT Security Audit | HDFC Bank</h4>
+                  <span class="job-duration">Sept 2012 - April 2013</span>
+                  <p>Directed regulatory IT auditing procedures for bank infrastructure and compliance reporting.</p>
+                </div>
+                <div class="older-job">
+                  <h4>Assistant Manager - Information Security | Angel Broking</h4>
+                  <span class="job-duration">Aug 2010 - Aug 2012</span>
+                  <p>Implemented ISO 27001 systems, set up Single Sign-On (SSO), and managed network security assessments.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS INVENTORY -->
+    <section class="skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title"><span class="code-bracket">&lt;</span>SECURITY_CAPABILITIES<span class="code-bracket">/&gt;</span></h2>
+          <p class="section-subtitle">Core categories of expertise decrypted from security audit reports</p>
+        </div>
+
+        <div class="skills-grid" id="skillsDisplayGrid">
+          <!-- Skill Category 1 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <i data-lucide="shield-check" class="skill-icon text-green"></i>
+              <h3>Cloud Security & Tools</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-pill">AWS GuardDuty</div>
+              <div class="skill-pill">CloudTrail</div>
+              <div class="skill-pill">AWS Macie</div>
+              <div class="skill-pill">WAF & DDoS Protection</div>
+              <div class="skill-pill">MVision CASB</div>
+              <div class="skill-pill">Azure Security Center</div>
+              <div class="skill-pill">Cloudflare ZTNA</div>
+              <div class="skill-pill">Nessus</div>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <i data-lucide="cpu" class="skill-icon text-cyan"></i>
+              <h3>AI Governance & Tech</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-pill font-bold">NIST AI RMF</div>
+              <div class="skill-pill font-bold">MAS AIRMG</div>
+              <div class="skill-pill">Shadow AI Discovery</div>
+              <div class="skill-pill">Generative AI Cyber Risk</div>
+              <div class="skill-pill">Data Residency</div>
+              <div class="skill-pill">Blockchain Security</div>
+              <div class="skill-pill">IoT/SCADA/ICS Security</div>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <i data-lucide="file-text" class="skill-icon text-purple"></i>
+              <h3>Regulatory Compliance</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-pill">MAS-SG</div>
+              <div class="skill-pill">PDPA-SG</div>
+              <div class="skill-pill">GDPR-EU</div>
+              <div class="skill-pill">HIPAA-US</div>
+              <div class="skill-pill">SOX-US</div>
+              <div class="skill-pill">OJK-ID</div>
+              <div class="skill-pill">SC-MY</div>
+              <div class="skill-pill">ISO 27001 / PCI DSS</div>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <i data-lucide="lock" class="skill-icon text-grey"></i>
+              <h3>Operations & Risk</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-pill">Vulnerability Management</div>
+              <div class="skill-pill">Data Protection / DPO</div>
+              <div class="skill-pill">Vendor Security Management</div>
+              <div class="skill-pill">Incident Response</div>
+              <div class="skill-pill">BCP / Disaster Recovery</div>
+              <div class="skill-pill">Threat Assessment</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS VAULT -->
+    <section class="certifications-section" id="certifications">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title"><span class="code-bracket">&lt;</span>CREDENTIALS_VAULT<span class="code-bracket">/&gt;</span></h2>
+          <p class="section-subtitle">Verified professional credentials and security certifications</p>
+        </div>
+
+        <div class="cert-grid" id="certificationsDisplayGrid">
+          <!-- Cert 1 -->
+          <div class="cert-card glow-green">
+            <div class="cert-icon-container"><i data-lucide="award"></i></div>
+            <h3>CISSP</h3>
+            <p>Certified Information Systems Security Professional</p>
+          </div>
+          <!-- Cert 2 -->
+          <div class="cert-card glow-cyan">
+            <div class="cert-icon-container"><i data-lucide="award"></i></div>
+            <h3>CISM</h3>
+            <p>Certified Information Security Manager</p>
+          </div>
+          <!-- Cert 3 -->
+          <div class="cert-card glow-purple">
+            <div class="cert-icon-container"><i data-lucide="award"></i></div>
+            <h3>CRISC</h3>
+            <p>Certified in Risk and Information Systems Control</p>
+          </div>
+          <!-- Cert 4 -->
+          <div class="cert-card">
+            <div class="cert-icon-container"><i data-lucide="award"></i></div>
+            <h3>CDPSE</h3>
+            <p>Certified Data Privacy Solutions Engineer</p>
+          </div>
+          <!-- Cert 5 -->
+          <div class="cert-card">
+            <div class="cert-icon-container"><i data-lucide="award"></i></div>
+            <h3>ISO 27001 LA</h3>
+            <p>ISO/IEC 27001 Lead Auditor</p>
+          </div>
+          <!-- Cert 6 -->
+          <div class="cert-card">
+            <div class="cert-icon-container"><i data-lucide="award"></i></div>
+            <h3>CEH</h3>
+            <p>Certified Ethical Hacker</p>
+          </div>
+          <!-- Cert 7 -->
+          <div class="cert-card">
+            <div class="cert-icon-container"><i data-lucide="award"></i></div>
+            <h3>CAIE</h3>
+            <p>Certified AI Engineer / Practitioner</p>
+          </div>
+          <!-- Cert 8 -->
+          <div class="cert-card">
+            <div class="cert-icon-container"><i data-lucide="award"></i></div>
+            <h3>CPISI</h3>
+            <p>Certified Payment Card Industry Security Implementer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPEAKING ENGAGEMENTS -->
+    <section class="speaking-section" id="speaking">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title"><span class="code-bracket">&lt;</span>COMMUNITY_DECRYPTION<span class="code-bracket">/&gt;</span></h2>
+          <p class="section-subtitle">Speaking engagements, publications, and advisory roles</p>
+        </div>
+
+        <div class="events-timeline" id="speakingEventsGrid">
+          <!-- Event 1 -->
+          <div class="event-card">
+            <div class="event-meta">
+              <span class="event-tag badge-green">Keynote Speaker</span>
+              <span class="event-date">October 2023</span>
+            </div>
+            <h3>AISA CyberCon 2023</h3>
+            <p class="event-location"><i data-lucide="map-pin"></i> Melbourne, Australia</p>
+            <p class="event-details">Presented briefings on: "Insider Threat: The Silent Killer" and "Mastering the Art of Vulnerability Management".</p>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="event-card">
+            <div class="event-meta">
+              <span class="event-tag badge-cyan">Virtual Keynote</span>
+              <span class="event-date">September 2023</span>
+            </div>
+            <h3>ISC2 Spotlight Virtual Conference</h3>
+            <p class="event-location"><i data-lucide="globe"></i> Global Stream</p>
+            <p class="event-details">Delivered key briefing: "Security Strategy - Aligning with Business Objectives" focusing on aligning infosec programs with board objectives.</p>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="event-card">
+            <div class="event-meta">
+              <span class="event-tag badge-purple">Author Publication</span>
+              <span class="event-date">2023</span>
+            </div>
+            <h3>Top Cyber News Magazine</h3>
+            <p class="event-location"><i data-lucide="book-open"></i> Print & Digital Edition</p>
+            <p class="event-details">Published author of "Next-Gen Insider Threats - Beyond the Human Element" discussing emerging threat modeling.</p>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="event-card">
+            <div class="event-meta">
+              <span class="event-tag">Summit Speaker</span>
+              <span class="event-date">August 2023</span>
+            </div>
+            <h3>ISACA GTACS 2023</h3>
+            <p class="event-location"><i data-lucide="map-pin"></i> Singapore</p>
+            <p class="event-details">Spoke on the panel for "Effective Risk Management Strategies for AI-Driven Technologies".</p>
+          </div>
+        </div>
+
+        <div class="awards-bar" id="awardsBar">
+          <div class="award-badge-card">
+            <i data-lucide="trophy" class="award-icon text-green"></i>
+            <div>
+              <h4>Cloud Security Risk Champion of the Year</h4>
+              <p>Awarded by Cloud Security Alliance (CSA) Chapter (2022)</p>
+            </div>
+          </div>
+          <div class="award-badge-card">
+            <i data-lucide="users" class="award-icon text-cyan"></i>
+            <div>
+              <h4>Certified Mentor</h4>
+              <p>Global Mentorship for Cybersecurity (GMFC) & ISC2 Singapore</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        <div class="contact-card">
+          <div class="contact-glow"></div>
+          <div class="section-header">
+            <h2 class="section-title"><span class="code-bracket">&lt;</span>SECURE_CONNECTION<span class="code-bracket">/&gt;</span></h2>
+            <p class="section-subtitle">Establish an encrypted link to negotiate advisory engagements or security leadership</p>
+          </div>
+
+          <div class="contact-wrapper">
+            <div class="contact-info-panel">
+              <h3>Direct Node Coordinates</h3>
+              <div class="info-link-item">
+                <i data-lucide="mail"></i>
+                <a href="mailto:balajiuk14@gmail.com" id="contactEmail">balajiuk14@gmail.com</a>
+              </div>
+              <div class="info-link-item">
+                <i data-lucide="phone"></i>
+                <span>+65 9779 6911</span>
+              </div>
+              <div class="info-link-item">
+                <i data-lucide="linkedin"></i>
+                <a href="https://www.linkedin.com/in/balajikapsikar" target="_blank" rel="noopener noreferrer" id="contactLinkedin">linkedin.com/in/balajikapsikar</a>
+              </div>
+              <div class="info-link-item">
+                <i data-lucide="rss"></i>
+                <a href="http://balajikapsikar.blogspot.com/" target="_blank" rel="noopener noreferrer" id="contactBlog">balajikapsikar.blogspot.com</a>
+              </div>
+            </div>
+
+            <div class="contact-form-panel">
+              <form id="portfolioContactForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                  <label for="contactName">Sender Identifier (Name)</label>
+                  <input type="text" id="contactName" required placeholder="e.g. John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="contactEmailInput">Secure Return Address (Email)</label>
+                  <input type="email" id="contactEmailInput" required placeholder="e.g. sender@domain.com">
+                </div>
+                <div class="form-group">
+                  <label for="contactMessage">Transmission Payload (Message)</label>
+                  <textarea id="contactMessage" rows="5" required placeholder="Enter message coordinates..."></textarea>
+                </div>
+                <button type="submit" class="cyber-btn primary-btn submit-btn" id="btnFormSubmit">
+                  <i data-lucide="shield-check"></i> SEND ENCRYPTED PAYLOAD
+                </button>
+              </form>
+              <div class="form-feedback hidden-content" id="formFeedback"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cyber-footer" id="mainFooter">
+    <div class="footer-container">
+      <p>&copy; 2026 Balaji Kapsikar. System Node Operational.</p>
+      <p class="crypt-stamp neon-text-cyan">HASH: D8BC-7A50-4B22-BD9B-5DB727F7F2B2</p>
+    </div>
+  </footer>
+
+  <!-- Link JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
